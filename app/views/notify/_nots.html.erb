@@ -1,0 +1,8 @@
+<div id="noti">
+  <div class="close">CERRAR</div>
+  <p>
+    <%= mensaje.body %><br>
+    from <%= mensaje.user.name %>
+  </p>
+  <p><%= link_to 'Llevarme ahi', chat_path(mensaje.chat) %></p>
+</div>

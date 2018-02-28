@@ -1,0 +1,21 @@
+<div class ="row">
+	<div class ="col-md-6 col-md-offset-3">
+		<h3><u>Hablando con: <strong><%= @chat.with(current_user).name %></strong></u></h3>
+		<br></br>
+
+		<div id="chat-main">
+
+		  <div id="chat-body" data-chat-id="<%= @chat.id %>">
+		    <%= render @chat.mensajes %>
+		  </div>
+
+		  <%= form_for @mensaje do |f| %>
+		    <%= hidden_field_tag 'mensaje_id', @mensaje.id %>
+		    <%= f.label " " %>
+		    <%= f.text_area :body %>
+		    <br></br>
+		    <%= f.submit "Enviar"%>
+		  <% end %>
+		</div>
+</div>
+	</div>
