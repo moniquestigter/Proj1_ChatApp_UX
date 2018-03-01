@@ -1,5 +1,5 @@
-<nav class="navbar navbar-inverse  navbar-static-top" >
-      <div class="container-fluid" style="color:red">
+<nav class="navbar navbar-inverse  navbar-static-top" style="background-color: #90869F">
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,21 +8,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "Chat App", root_path, class: "navbar-brand"%>
+          <%= link_to "Chat App", root_path, {:style=>'color:#000000; font-size:25px; font-family: "Trebuchet MS", Times, serif;', :class => "navbar-brand"} %>
+          
         </div>
     
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><%= link_to "New Chat", users_path %></li>
-              <li class="dropdown">
-                <a href="#"> Logged in as: <%= current_user.name %></a>
-                  <li><a href="#"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a></li>
+              <li><%= link_to "New Chat", users_path, {:style=>'color:#000000; font-size:20px; font-family: "Trebuchet MS", Times, serif;'} %></li>
+              <li><a style="color:#000000; font-size:20px; font-family:'Trebuchet MS', 'Times', 'serif';", href="#"> Logged in as: <%= current_user.name %></a>
+              <li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#000000; font-size:20px; font-family: "Trebuchet MS", Times, serif;', method: :delete}%></li>
               </li>
             <% else %>
-              <li><%= link_to "Sign Up", new_user_registration_path %></li>
-              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path, {:style=>'color:#000000; font-size:20px; font-family: "Trebuchet MS", Times, serif;'}%></li>
+              <li><%= link_to "Sign In", new_user_session_path, {:style=>'color:#000000; font-size:20px; font-family: "Trebuchet MS", Times, serif;'}%></li>
             <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->

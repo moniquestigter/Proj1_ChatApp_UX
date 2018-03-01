@@ -1,3 +1,6 @@
-<li>
-  <%= user.name %> | <%= link_to 'Nuevo Chat', new_mensaje_path(recipient_id: user) %>
-</li>
+
+<br>
+<br>
+<div style= "font-size: 20px;" class= "col-md-4 col-md-offset-4">
+  <%=  user.name  %> ·· <%= link_to 'nuevo chat', new_mensaje_path(recipient_id: user), {:style=>'color:#000000; text-align: center; font-size:14px; font-family: "Trebuchet MS", Times, serif;'} %> </div>
+  <br>
