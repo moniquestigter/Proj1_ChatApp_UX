@@ -13,7 +13,7 @@ class MensajesController < ApplicationController
 		@mensaje.save!
 
 		flash[:success] = "Enviado"
-		redirect_to root_path(@mensaje)
+		redirect_to chat_path(@chat)
 	end
 
 	private

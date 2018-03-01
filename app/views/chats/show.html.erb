@@ -5,12 +5,12 @@
 
 		<div id="chat-main">
 
-		  <div id="chat-body" data-chat-id="<%= @chat.id %>">
+		  <div id="chat-body">
 		    <%= render @chat.mensajes %>
 		  </div>
 
 		  <%= form_for @mensaje do |f| %>
-		    <%= hidden_field_tag 'mensaje_id', @mensaje.id %>
+		    <%= hidden_field_tag 'chat_id', @chat.id %>
 		    <%= f.label " " %>
 		    <%= f.text_area :body %>
 		    <br></br>
